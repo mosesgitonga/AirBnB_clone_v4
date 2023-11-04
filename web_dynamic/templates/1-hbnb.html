@@ -39,8 +39,8 @@
           <h4>&nbsp;</h4>
           <div class="popover">
             <ul>
-              {% for amenity in amenities %}
-              <li><input type="checkbox" data-id={{ amenity_id }} data-name={{ amenity_name }}>{{ amenity.name }}</li>
+              {% for amenity in amenities|sort(attribute='name') %}
+              <LI><input type="checkbox" data-id="{{ amenity_id }}" data-name="{{ amenity_name }}">{{ amenity.name }}</LI>
               {% endfor %}
             </ul>
           </div>
